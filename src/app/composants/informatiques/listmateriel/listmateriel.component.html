@@ -1,0 +1,10 @@
+<h1>Nos Produits en informatique</h1>
+
+<ng-container *ngFor="let t of materiels">
+  <li *ngIf="t.quantite >0" >
+    <img [src]="t.photo" />
+    {{t.libelle |titlecase}}
+    <span *ngIf="t.hautGamme==true" class="badge badge-primary badge-pill">prix: {{t.prix}}DT</span>
+    <span *ngIf="t.hautGamme!=true" class="badge badge-dark badge-pill">prix: {{t.prix}} DT</span>
+  </li>
+</ng-container>
