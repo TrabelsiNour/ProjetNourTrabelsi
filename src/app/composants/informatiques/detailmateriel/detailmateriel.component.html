@@ -3,17 +3,17 @@
 
 
 
-    <ul>
+    <ul class=" list-group" class="col-6">
 
-      <li><img [src]="materiel.photo"/></li>
-      <li>Marque: {{materiel.marque}}</li>
-      <li>prix: {{materiel.prix}}</li>
-      <li>Description: {{materiel.description}}</li>
-      <li>Quantité: {{materiel.quantite}}</li>
-      <li><input type="checkbox" [checked]="materiel.hautGamme"> Haut de Gamme</li>
+      <li class="list-group-item "><img [src]="materiel.photo"/></li>
+      <li class="list-group-item ">Marque: {{materiel.marque}}</li>
+      <li class="list-group-item ">prix: {{materiel.prix}}</li>
+      <li class="list-group-item ">Description: {{materiel.description}}</li>
+      <li class="list-group-item ">Quantité: {{materiel.quantite}}</li>
+      <li class="list-group-item "><input type="checkbox" [checked]="materiel.hautGamme"> Haut de Gamme</li>
 
 
-      <li><button type="button" class="btn btn-primary">Afficher les commentaires</button></li>
+      <li class="list-group-item "><button type="button" class="btn btn-primary">Afficher les commentaires</button></li>
     </ul>
 
 
