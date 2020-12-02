@@ -1,10 +1,13 @@
-<h1>Nos Produits en informatique</h1>
-
+<h1 class="text-center" pt-3>Nos Produits en informatique</h1>
+<div class="container">
+  <div class="row">
 <ng-container *ngFor="let t of materiels">
-  <li *ngIf="t.quantite >0" >
-    <img [src]="t.photo" />
-    {{t.libelle |titlecase}}
-    <span *ngIf="t.hautGamme==true" class="badge badge-primary badge-pill">prix: {{t.prix}}DT</span>
-    <span *ngIf="t.hautGamme!=true" class="badge badge-dark badge-pill">prix: {{t.prix}} DT</span>
-  </li>
+  <div class="col-4 pt-3" *ngIf="t.quantite >0" >
+      <nou-materiel [materiel]="t"></nou-materiel>
+  </div>
 </ng-container>
+
+</div>
+</div>
+
+
