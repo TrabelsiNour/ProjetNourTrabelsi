@@ -3,41 +3,21 @@
 
 
 
-    <div class="container">
-      <div class="row">
-        <div class="col-6">
-        <div class="card">
+    <ul>
 
-      <div class="card-header"><img [src]="materiel.photo"/></div>
-      <div class="card-header">Marque: {{materiel.marque}}</div>
-      <div class="card-header">prix: {{materiel.prix}}</div>
-      <div class="card-header">Description: {{materiel.description}}</div>
-      <div class="card-header">Quantité: {{materiel.quantite}}</div>
-      <div class="card-header"><input type="checkbox" [checked]="materiel.hautGamme"> Haut de Gamme</div>
+      <li><img [src]="materiel.photo"/></li>
+      <li>Marque: {{materiel.marque}}</li>
+      <li>prix: {{materiel.prix}}</li>
+      <li>Description: {{materiel.description}}</li>
+      <li>Quantité: {{materiel.quantite}}</li>
+      <li><input type="checkbox" [checked]="materiel.hautGamme"> Haut de Gamme</li>
 
 
-      <div class="card-header text-center"><button type="button" class="btn btn-primary">Afficher les commentaires</button></div>
-    </div>
-  </div>
+      <li><button type="button" class="btn btn-primary">Afficher les commentaires</button></li>
+    </ul>
 
 
 
 
-
-  <div class="col-6">
-    <h1>Liste des commentaires</h1>
-    <ng-container *ngFor="let m of materiel.commentaires; index as indice">
-        commentaire n°{{indice+1}}: {{m.contenu}}<br/>
-        {{m.auteur}}<div class="badge badge-pill badge-primary ">{{m.note}}</div><br/>
-        {{m.date |date:'dd/MM/yyyy'}}<br/>
-        <br/>
-
-
-
-    </ng-container>
-  </div>
-</div>
-
-</div>
 
 
