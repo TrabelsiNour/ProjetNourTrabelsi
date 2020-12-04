@@ -2,6 +2,7 @@
 <h3>Détails du "{{materiel.libelle}}" d'ID: {{materiel.id}}</h3>
 
 
+<div class="row">
 
     <ul class=" list-group" class="col-6">
 
@@ -13,11 +14,20 @@
       <li class="list-group-item "><input type="checkbox" [checked]="materiel.hautGamme"> Haut de Gamme</li>
 
 
-      <li class="list-group-item "><button type="button" class="btn btn-primary">Afficher les commentaires</button></li>
+      <li class="list-group-item "><button  type="button" class="btn btn-primary" (Click)="onClick()">Afficher les commentaires</button></li>
     </ul>
 
 
 
+
+
+
+<div class="col-6" *ngIf="nounou" >
+
+  <nou-comment [commentaire]="materiel.commentaires" ></nou-comment>
+
+</div>
+</div>
 
 
 
