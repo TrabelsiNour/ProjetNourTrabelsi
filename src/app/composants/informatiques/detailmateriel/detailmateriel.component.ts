@@ -9,7 +9,7 @@ import { Materiel } from 'src/app/models/materiel';
   styleUrls: ['./detailmateriel.component.css']
 })
 export class DetailmaterielComponent implements OnInit {
-  materiel:Materiel[];
+  materiel:Materiel;
 
 
 

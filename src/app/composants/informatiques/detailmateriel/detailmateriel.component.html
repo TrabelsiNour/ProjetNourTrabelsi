@@ -1,28 +1,28 @@
 <div class="container">
   <div class="row">
-      <div class="col-6" *ngFor='let mat of materiel'>
-          <h2>Détails du "{{mat.libelle}}" d'Id {{mat.id}}</h2>
-          <ul class="list-group">
-              <li class="list-group-item"><img src="{{mat.photo}}" /></li>
-              <li class="list-group-item">Marque : {{mat.marque}}</li>
-              <li class="list-group-item">Prix : {{mat.prix}}</li>
-              <li class="list-group-item">Description : {{mat.description}}</li>
-              <li class="list-group-item">Quantité : {{mat.quantite}}</li>
-              <li class="list-group-item"><input type="checkbox" [checked]="mat.hautGamme"/>Haut de gamme</li>
-              <li class="list-group-item">
-                  <button type="button" class="btn btn-primary"
-                  (click)="onclick()">Afficher les commentaires</button>
-              </li>
-          </ul>
+      <div class="col-6">
+          <h2>Détails du "{{materiel.libelle}}" d'Id {{materiel.id}}</h2>
+                    <ul class="list-group">
+                        <li class="list-group-item"><img [src]="materiel.photo" alt="photo materiel"/></li>
+                        <li class="list-group-item">Marque : {{materiel.marque}}</li>
+                        <li class="list-group-item">Prix : {{materiel.prix}}</li>
+                        <li class="list-group-item">Description : {{materiel.description}}</li>
+                        <li class="list-group-item">Quantité : {{materiel.quantite}}</li>
+                        <li class="list-group-item"><input type="checkbox" [checked]="materiel.hautGamme"/>Haut de gamme</li>
+                        <li class="list-group-item">
+                            <button type="button" class="btn btn-primary"
+                            (click)="onclick()">Afficher les commentaires</button>
+                        </li>
+                    </ul>
           </div>
           <div class="col-6" *ngIf="nouns" >
           <h1>Liste des commentaires</h1>
-          <ng-container *ngFor="let t of materiel">
-          <ng-container *ngFor="let m of t.commentaires; index as indice">
+
+          <ng-container *ngFor="let m of materiel.commentaires; index as indice">
             commentaire n°{{indice+1}}:
             <nou-comment [commentaire]="m" ></nou-comment>
           </ng-container>
-        </ng-container>
+
         </div>
   </div>
 </div>

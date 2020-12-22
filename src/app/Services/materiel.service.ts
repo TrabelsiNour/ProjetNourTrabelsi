@@ -72,10 +72,13 @@ export class MaterielService {
     return this.materiels;
   }
 
-  getMaterielById<Materiel>(id:string){
-    return this.materiels.filter(mat =>mat.id == id);
-    }
+  /*getMaterielById(id:string):Materiel{
+    return this.materiels.filter(mat =>mat.id == id)[0];
+    }*/
 
+    getMaterielById(id:string) :Materiel{
+    return <Materiel>  this.materiels.find(mat => mat.id == id);
+  }
 
   constructor() { }
 }

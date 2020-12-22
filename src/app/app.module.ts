@@ -8,6 +8,9 @@ import { ListmaterielComponent } from './composants/informatiques/listmateriel/l
 import { MaterielComponent } from './composants/informatiques/materiel/materiel.component';
 import { DetailmaterielComponent } from './composants/informatiques/detailmateriel/detailmateriel.component';
 import { CommentComponent } from './composants/commentaires/comment/comment.component';
+import { ContactComponent } from './contact/contact.component';
+import { Error404Component } from './error404/error404.component';
+import { MenuComponent } from './menu/menu.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +19,10 @@ import { CommentComponent } from './composants/commentaires/comment/comment.comp
     ListmaterielComponent,
     MaterielComponent,
     DetailmaterielComponent,
-    CommentComponent
+    CommentComponent,
+    ContactComponent,
+    Error404Component,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
