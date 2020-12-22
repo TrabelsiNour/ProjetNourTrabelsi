@@ -1,6 +1,7 @@
 import { MaterielService } from 'src/app/Services/materiel.service';
 import { Component, OnInit } from '@angular/core';
 import { Materiel } from 'src/app/models/materiel';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
 
@@ -10,7 +11,7 @@ import { Materiel } from 'src/app/models/materiel';
 })
 export class DetailmaterielComponent implements OnInit {
   materiel:Materiel;
-
+  id:number;
 
 
 
@@ -21,13 +22,19 @@ onclick(){
   this.nouns = !this.nouns;
 }
 
+onAccueil()
+{
+this.router.navigate(['/listmateriel']);
+}
 
 
-constructor(private materielservice:MaterielService) { }
+
+constructor(private materielservice:MaterielService,private activatedRoute:ActivatedRoute,private router:Router) { }
 
 ngOnInit(): void {
 
-  this.materiel= this.materielservice.getMaterielById('2');
+  this.materiel= this.materielservice.getMaterielById(this.activatedRoute.snapshot.params['id']);
+
 
 }
 
