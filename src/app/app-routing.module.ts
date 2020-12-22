@@ -7,7 +7,7 @@ import { Error404Component } from './error404/error404.component';
 
 const routes: Routes = [
 {path:'accueil', component:AcceuilsComponent},
-{path:'Informatique', component:ListmaterielComponent},
+{path:'listmateriel', component:ListmaterielComponent},
 {path:'contact', component:ContactComponent},
 {path:'', redirectTo:'accueil', pathMatch:'full'},
 {path:'**', component:Error404Component}
